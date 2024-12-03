@@ -11,7 +11,7 @@ let getInputFilename s = (__SOURCE_DIRECTORY__ + (sprintf "/input/%s.txt" s))
 
 let readInput (s: string) = getInputFilename s |> readLines
 
-let readAsTest (s: string) =
+let readAsText (s: string) =
     let fn = getInputFilename s
     File.ReadAllText(fn)
 
@@ -83,8 +83,9 @@ let printImage boolToString (image: bool[][]) =
     printfn ""
 
 let print2d rows =
-    rows |> Seq.iter (fun row -> (row |> Seq.map string |> String.concat "" |> printfn "%s"))
-    
+    rows
+    |> Seq.iter (fun row -> (row |> Seq.map string |> String.concat "" |> printfn "%s"))
+
 let rec cartesian inputs =
     match inputs with
     | h :: [] -> List.fold (fun acc elem -> [ elem ] :: acc) [] h

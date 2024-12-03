@@ -37,18 +37,19 @@ let removeEachElement arr =
         |> Array.mapi (fun j x -> if i <> j then Some x else None)
         |> Array.choose id)
 
-let part1 fn () = getInput fn |> Array.map Array.pairwise |> solve |> Array.length |> int64
+let part1 fn () =
+    getInput fn
+    |> Array.map Array.pairwise
+    |> solve
+    |> Array.length
+    |> int64
 
 let part2 fn () =
     let input = getInput fn
 
     input
-    |> Array.map (
-        removeEachElement
-        >> (Array.map Array.pairwise)
-    )
+    |> Array.map (removeEachElement >> (Array.map Array.pairwise))
     |> Array.map solve
     |> Array.filter (Array.isEmpty >> not)
     |> Array.length
     |> int64
-

@@ -1,4 +1,5 @@
 ﻿module AoC2024.Tests
+
 open AoC2024
 
 
@@ -25,3 +26,14 @@ let ``day2, part1`` () =
 let ``day2, part2`` () =
     Day2.part2 "test2" () |> should equal 4L
     Day2.part2 "2" () |> should equal 626L
+
+[<Fact>]
+let ``day3, part1`` () =
+    Day3.part1 "test3" () |> should equal 161L
+    Day3.part1 "3" () |> should equal 160672468L
+
+[<Fact>]
+let ``day3, part2`` () =
+    Day3.part2 "test3b" () |> should equal 48L
+    Day3.part2 "3" () |> should equal 84893551L
+    

@@ -10,8 +10,16 @@
         <Compile Include="Day1.fs"/>
         <Compile Include="Day2.fs"/>
         <Compile Include="Day3.fs"/>
+        <Compile Include="Day4.fs" />
         <Compile Include="Tests.fs"/>
         <Compile Include="Program.fs"/>
+        <Content Include="input\test3b.txt" />
+        <Content Include="input\test3.txt" />
+        <Content Include="input\test2.txt" />
+        <Content Include="input\test1.txt" />
+        <Content Include="input\3.txt" />
+        <Content Include="input\2.txt" />
+        <Content Include="input\1.txt" />
     </ItemGroup>
 
     <ItemGroup>

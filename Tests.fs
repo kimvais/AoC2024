@@ -47,3 +47,8 @@ let ``day4, part2`` ()=
     Day4.part2 "test4" () |> should equal 9L
     Day4.part2 "4" () |> should equal 1822L
     
+[<Fact>]
+let ``day5, part2`` ()=
+    Day4.part2 "test5" () |> should equal 0L
+    Day5.part2 "5" () |> should equal 0L 
+    

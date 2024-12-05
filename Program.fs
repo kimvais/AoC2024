@@ -15,7 +15,7 @@ let main argv =
     let stopWatch = System.Diagnostics.Stopwatch.StartNew()
 
     match day with
-    | "test" -> Day5.part1 "test5" ()
+    | "test" -> Day5.part2 "test5" ()
     | "1" -> Day1.part1 "1" ()
     | "1b" -> Day1.part2 "1" ()
     | "2" -> Day2.part1 "2" ()

@@ -71,7 +71,4 @@ let part2 fn () =
     let rules, pages = getInput fn
     let pages' = pages |> List.filter (checkOrdering rules >> not)
 
-    pages'
-    |> List.map (sort rules [])
-    |> List.map getMiddleItem
-    |> List.sum
+    pages' |> List.map (sort rules [] >> getMiddleItem) |> List.sum

@@ -63,7 +63,12 @@ let rec sort rules acc rem =
 
         let head, tail =
             candidates
-            |> List.find (fun (item, pages) -> Set.isSuperset (rules |> Map.find item) pages)
+            |> List.find (fun (item, pages) ->
+                Set.isSuperset
+                    (match Map.tryFind item rules with
+                     | Some s -> s
+                     | None -> Set.empty)
+                    pages)
 
         sort rules (acc @ [ head ]) (tail |> List.ofSeq)
 

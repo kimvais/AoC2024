@@ -1,7 +1,5 @@
 ﻿module AoC2024.Day5
 
-open System.Reflection.PortableExecutable
-open System.Security.Cryptography.X509Certificates
 open AoC2024.Prelude
 
 let parseRule s = s |> split '|' |> (fun [| a; b |] -> (int64 a, int64 b))
